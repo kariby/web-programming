@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" > 
+	<link rel="stylesheet" href="iii.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+	 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<title>Лабораторная работа 3</title>
+	<script>
+	$( function() {
+	$( document ).tooltip();
+	$( "#datepicker" ).datepicker();
+	$( "#accordion" ).accordion();
+	var spinner = $( "#spin" ).spinner();
+	var availableTags = ["парик","ножницы","краска","стрижка","укладка","прическа","расческа","фен","утюжок","каре","челка","блонд","рыжий","русый","хна","басма","свадебная укладка","свадебная прическа","стрижка горячими ножницами","салон"];
+	$( "#tags" ).autocomplete({
+	source: availableTags
+	});
+	} );
+	</script>
+</head>
+
+<body>
+	<div class="header">
+		<ul class="main-menu">
+			<li style="font-size: 2em">This is %sitename%!</li>
+			<li><a href="#">Bla-bla-bla-bla-bla-bla-bla</a></li>
+			<li><a href="#">Bla-bla-bla-bla</a></li>
+			<li><a href="#">Bla-bla-bla</a></li>
+			<li><a href="#">Bla-bla</a></li>
+		</ul>
+	</div>
+	<div class="content">
+
+		<div class="search" align="center">
+			<i class="fa fa-search left-icon"></i> 
+			<input title="Type here!" placeholder="Search here"/> 
+		</div>
+
+
+		<img class="banner" src="https://www.ultrahaircare.com/wp-content/uploads/2018/11/banner3.jpg" width="97%" alt="1.jpg">
+	
+		
+		<div id="accordion">
+				 <h6>Наши услуги</h6>
+					<div>
+						<p>Мы оказываем услуги стрижки, укладки волос, завивки волос, экранирования волос, ламинирования волос, THERMOKERATIN и т.д.</p>
+						<p style="font-size:200%">Звоните по телефону 8-800-555-35-35!!!</p>
+					</div>
+				<h6>Примеры наших работ</h6>
+					<div align="center">
+						<img title="500 р." wight="150px" height="150px" src="https://www.newladyday.ru/wp-content/uploads/2016/12/korotkiye-strizhki-dlya-zhenshchin-6.jpg">
+						<img title="1000 р." wight="150px" height="150px"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Veo1dCeoUhuylCGZfl8ZX6c12FqwvjGNNiYKE_WXVnKtnb0m">
+						<img title="750 р." wight="150px" height="150px" src="https://topxstyle.ru/wp-content/uploads/2017/04/strizhki-na-sredniye-vyushchiyesya-volosy-12.jpg">
+						<img title="500 р." wight="150px" height="150px" src="https://news-intime.ru/wp-content/uploads/2016/12/modnyye-zhenskiye-strizhki-na-sredniye-volosy-10.jpg">
+						<img title="250 р." wight="150px" height="150px" src="https://hair-man.ru/wp-content/uploads/2017/08/men.jpg">
+						<img title="750 р." wight="150px" height="150px" src="https://ratatum.com/wp-content/uploads/2017/08/7f1d884900cb83fcc0bea74d52f595cb.jpg">
+						<img title="500 р." wight="150px" height="150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiZB7IVAcHwTC9E8sdyIK97NF1rMqsJT6tI7yfO3ZzAQLC1W5B">
+					</div>
+				</div>
+		
+		<table class="content-table">
+		<tr>
+			<td class="ceil" align="center">
+				<p>Какое количество услуг вам необходимо?</p>
+				<input id="spin" name="value">
+			</td>
+			<td class="ceil" align="center">
+				<p>Выберите тип услуги:</p>
+				<input id="tags"/> 
+			</td>
+			<td class="ceil" align="center">
+				<p>Когда вы хотите посетить нашу парикмахерскую?</p>
+				<input id="datepicker"/> 
+			</td>
+		</tr>
+		</table>
+	</div>
+</body>
+</html>
